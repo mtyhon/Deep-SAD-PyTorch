@@ -119,6 +119,8 @@ class DeepSADTrainer(BaseTrainer):
                 inputs = inputs.to(self.device)
                 labels = labels.to(self.device)
                 semi_targets = semi_targets.to(self.device)
+                print('Unique Semi Targets: ', np.unique(semi_targets.data.cpu().numpy()))
+
                 idx = idx.to(self.device)
 
                 outputs = net(inputs)

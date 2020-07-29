@@ -62,5 +62,7 @@ def create_semisupervised_setting(labels, normal_classes, outlier_classes, known
     list_labels = labels_known_normal + labels_unlabeled_normal + labels_unlabeled_outlier + labels_known_outlier
     list_semi_labels = (semi_labels_known_normal + semi_labels_unlabeled_normal + semi_labels_unlabeled_outlier
                         + semi_labels_known_outlier)
+    print('Semi Labels Known Normal: ', semi_labels_known_normal)
+    print('List Semi Labels: ', list_semi_labels)
 
     return list_idx, list_labels, list_semi_labels
